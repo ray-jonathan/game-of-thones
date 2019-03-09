@@ -1,17 +1,22 @@
 .the-box{
+    height: 500px;
     display: flex;
-    width: 100%;
-    justify-content: center
+    justify-content: center;
+    flex-direction: row;
 }
 
 .got-names{
+    display: flex;
+    flex-direction: column;
     border: 2px solid red;
-    display: grid;
-    grid-template-columns: 100%;
+    width: 20%;
+    height: 100%;
+    overflow-y: auto;
 }
+
 .got-stats{
     border: 2px solid blue;
-    display: grid;
-    grid-template-columns: 100%;    
+    width: 75%;
+    height: 100%;
     word-wrap: break-word;
 }
