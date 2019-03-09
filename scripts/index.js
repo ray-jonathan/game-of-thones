@@ -1,6 +1,7 @@
 const gotNames = document.querySelector("[data-gotNames");
 const gotStats = document.querySelector("[data-gotStats");
 
+// Set up the left hand pane
 function makeNamesButtons(charactersArray){
     const names = charactersArray.map(function (guy){
         return guy.name;
@@ -12,13 +13,14 @@ function makeNamesButtons(charactersArray){
             gotNames.append(button);
         });
 }
+makeNamesButtons(characters);
 
-
+// Fill in the right hand pane
 function respondToClick() {
     personName = event.target.textContent;
     console.log(personName);
     characters.forEach(function(person){
-        if (person.name === personName) {
+        if (person.name == personName) {
             gotStats.textContent = 'LOREM IPSUM';
         }
     });
@@ -31,4 +33,4 @@ const characterButtons = document.querySelectorAll('[data-target]');
 characterButtons.forEach(addClickEvent);
 
 
-makeNamesButtons(characters);
+
