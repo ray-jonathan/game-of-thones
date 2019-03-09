@@ -1,0 +1,14 @@
+.the-box{
+    display: flex;
+    width: 100%;
+    justify-content: center
+}
+
+.got-names{
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.got-stats{
+    border: 2px solid blue;
+}
