@@ -159,6 +159,7 @@ function makeNamesButtons(charactersArray){
             button.textContent = name;
             let cleanName = name.replace(/\s+/g, '').replace("'", '').replace(",", '');
             button.setAttribute("ID", cleanName);
+            button.addEventListener("click", populatePlayerCard(charactersArray, name));
             gotNames.append(button);
             console.log(name);
         });
@@ -168,14 +169,12 @@ function populatePlayerCard(charactersArray, dude){
     const person = charactersArray.filter(function (guy){
         return guy.name === dude;
     });
-    return person[0].playedBy[0];
+    gotStats.append(person[0].playedBy[0]);
 }
 
 
 
 
-const nameInfo = makeNamesButtons(characters);
-const nameStats = populatePlayerCard(characters, CLICKyEVENTNAME);
-
-gotNames.append(nameInfo);
-gotStats.append(nameStats);
+// const nameInfo = makeNamesButtons(characters);
+makeNamesButtons(characters);
+// gotNames.append(nameInfo);

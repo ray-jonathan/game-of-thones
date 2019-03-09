@@ -11,4 +11,6 @@
 }
 .got-stats{
     border: 2px solid blue;
+    display: grid;
+    grid-template-columns: 100%;
 }
